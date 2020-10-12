@@ -29,7 +29,13 @@ public class Player : MonoBehaviour
         transform.position = temp;
     }
 
-
+    private void OnTriggerEnter2D(Collider2D target)
+    {
+        if(target.tag == "Bomb")
+        {
+            Time.timeScale = 0;
+        }
+    }
 
 
 
